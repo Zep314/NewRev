@@ -16,7 +16,7 @@ body {
 
 .container {
 	width: 1024px;
-    height: 1132px;
+    height: 1242px;
 	margin: 0 auto;
     overflow: hidden;
     background:#d9d9d9;
@@ -55,6 +55,8 @@ body {
     grid-column: 1 / 3 ;
     grid-row: 2;
     height: 318px;
+    padding-top: 0px;
+    padding-left: 30px;
 }
 
 
@@ -173,6 +175,7 @@ body {
 .button1:hover {
     background: #0000ff;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .button1:active {
@@ -199,6 +202,7 @@ body {
 .checkbox_hints {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 .chb_label {
@@ -207,6 +211,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: pointer;
 }
 
 .first_move {
@@ -215,11 +220,73 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
-    justify-self: start;
     border: 1px solid #000;
-    height: 140px;
-    align-items: center;
+    height: 90px;
     padding-left: 10px;
+}
+
+.radio_head {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.radio_item {
+    margin-left: 5px;
     display: flex;
-    gap: 20px;
+    justify-content: start;
+    gap: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.radio_point, .radio_label {
+    cursor: pointer;
+}
+
+.c_border {
+    height: 320px;
+    border: 1px solid #000;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.log_area {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    resize: none;
+    overflow: auto;
+    
+}
+
+.result {
+    width: 300px;
+    height: 200px;
+    display: grid;
+    text-align: center;
+    position: absolute;
+    transform: translate(150px, 200px);
+    background: #0f0;
+    border: 1px solid #000;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.result_area {
+    display: flexbox;
+    justify-content: center;
+    gap: 30px;
+}
+
+.result_text {
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
 }
