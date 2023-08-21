@@ -32,7 +32,7 @@ body {
     display: grid;
     gap: 0;
     grid-gap: 30px;
-    grid-template-columns: 600px 314px;
+    grid-template-columns: 600px 360px;
 
 }
 
@@ -47,6 +47,8 @@ body {
 .b {
     grid-column: 2;
     grid-row: 1;
+    padding-top: 30px;
+    padding-left: 30px;
 }
 
 .c {
@@ -81,17 +83,143 @@ body {
 }
 
 .counter_tab {
-    display: inline;
-    color: #000;
-    text-align: center;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    display: flex;
     width: 174px;
     height: 64px;
     border-radius: 32px;
     border: 1px solid #000;
     background: #888;
-    
+    justify-content: center;
+    align-items: center;
+}
+
+.tab1 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.tab_black {
+    color: #000;
+}
+
+.tab_white {
+    color: #fff;
+}
+
+.tab_underline {
+    text-decoration-line: underline;
+}
+
+.game_field {
+    margin-top: 30px;
+    width: 600px;
+    height: 600px;
+    background: #0DA838;
+}
+
+.b_border {
+    height: 738px;
+    border: 1px solid #000;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.game_status {
+    display: flex;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    justify-self: start;
+    gap: 10px;
+    border: 1px solid #000;
+    height: 40px;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.status_label {
+    font-style: normal;
+}
+
+.status_text {
+    font-style: italic;
+}
+
+.button_area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.button1 {
+    width: 125px;
+    height: 40px;
+    border-radius: 20px;
+    background: #0000aa;
+    border: 0px;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.button1:hover {
+    background: #0000ff;
+    transition: 0.5s;
+}
+
+.button1:active {
+    background: #ff0000;
+    transition: 0.5s;
+    color: #000;
+}
+
+.game_hints {
+    margin-top: 30px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    justify-self: start;
+    border: 1px solid #000;
+    height: 40px;
+    align-items: center;
+    padding-left: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.checkbox_hints {
+    width: 20px;
+    height: 20px;
+}
+
+.chb_label {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.first_move {
+    margin-top: 30px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    justify-self: start;
+    border: 1px solid #000;
+    height: 140px;
+    align-items: center;
+    padding-left: 10px;
+    display: flex;
+    gap: 20px;
 }
