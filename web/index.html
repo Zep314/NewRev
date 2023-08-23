@@ -29,12 +29,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="result">
+                    <div id="resultWindow" class="result">
                         <div class="result_area">
                             <div class="result_text">
                                 Black win!
                             </div>
-                            <button class="button1">Close</button>
+                            <div>
+                                <button id="closeButtonResultWindow" class="button1">Close</button>
+                            </div>
                         </div>
                         
                     </div>
@@ -46,11 +48,11 @@
                     <div class="b_border">
                         <div class="game_status">
                             <div class="status_label">Status:</div>
-                            <div class="status_text">Awaiting game...</div>
+                            <div id="status_text" class="status_text">Awaiting game...</div>
                         </div>
                         <div class="button_area">
-                            <button class="button1" title="New game">New game</button>
-                            <button class="button1" title="Reset">Reset</button>
+                            <button id="newGameButton" class="button1" title="New game">New game</button>
+                            <button id="resetGameButton" class="button1" title="Reset">Reset</button>
                         </div>
                         <div class="game_hints">
                             <input type="checkbox" class="checkbox_hints" id="chb_hints" title="Show hints" value="1">
@@ -123,4 +125,5 @@
         </div>
     </main>
 </body>
+<script src="js/main.js"></script>
 </html>

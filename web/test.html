@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Color</title>
+  <style>
+    #colorDiv {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="colorDiv">Click the button</div>
+  <button id="changeColorButton">Change Color</button>
+
+  <script>
+    const colorDiv = document.getElementById('colorDiv');
+    const changeColorButton = document.getElementById('changeColorButton');
+
+    changeColorButton.addEventListener('click', function() {
+      const randomColor = getRandomColor();
+      colorDiv.style.backgroundColor = randomColor;
+    });
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>
