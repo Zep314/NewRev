@@ -40,9 +40,10 @@
                         </div>
                         
                     </div>
-                    <div class="game_field">
-                        123
-                    </div>
+<!--                    <div class="game_field">-->
+<!--                        123-->
+<!--                    </div>-->
+                    <canvas id="game_field" class="game_field"></canvas>
                 </div>
                 <div class="b">
                     <div class="b_border">
@@ -51,63 +52,69 @@
                             <div id="status_text" class="status_text">Awaiting game...</div>
                         </div>
                         <div class="button_area">
-                            <button id="newGameButton" class="button1" title="New game">New game</button>
+                            <button id="newGameButton" class="button1" title="Start game">Start game</button>
                             <button id="resetGameButton" class="button1" title="Reset">Reset</button>
                         </div>
-                        <div class="game_hints">
+                        <div id="game_hints" class="game_hints">
                             <input type="checkbox" class="checkbox_hints" id="chb_hints" title="Show hints" value="1">
-                            <label for="chb_hints" class="chb_label" title="Show hints">
+                            <label id="label_checkbox_hints" for="chb_hints" class="chb_label" title="Show hints">
                                 Show hints
                             </label>
                         </div>
-                        <div class="first_move">
-                            <div class="radio_head">
+                        <div id="first_move" class="first_move">
+                            <div id="label_first_move" class="radio_head">
                                 First move:
                             </div>
                             <div class="radio_item">
                                 <input type="radio" class="radio_point" id="white_first_move" name = "first_move" title="White first move" value="0" checked>
-                                <label for="white_first_move" class="radio_label" title="White first move">
+                                <label id="label_white_first_move" for="white_first_move" class="radio_label" title="White first move">
                                     White first move
                                 </label>
                             </div>
                             <div class="radio_item">
                                 <input type="radio" class="radio_point" id="black_first_move" name = "first_move"  title="Black first move" value="1">
-                                <label for="black_first_move" class="radio_label" title="Black first move">
+                                <label id="label_black_first_move" for="black_first_move" class="radio_label" title="Black first move">
                                     Black first move
                                 </label>
                             </div>
                         </div>
-                        <div class="first_move">
-                            <div class="radio_head">
+                        <div id="radio_head" class="first_move">
+                            <div id="label_radio_head" class="radio_head">
                                 Computer play:
                             </div>
                             <div class="radio_item">
                                 <input type="radio" class="radio_point" id="computer_plays_white" name = "computer_move" title="Computer plays white" value="0">
-                                <label for="computer_plays_white" class="radio_label" title="Computer plays white">
+                                <label id="label_computer_plays_white" for="computer_plays_white" class="radio_label" title="Computer plays white">
                                     White
                                 </label>
                             </div>
                             <div class="radio_item">
                                 <input type="radio" class="radio_point" id="computer_plays_black" name = "computer_move"  title="Computer plays black" value="1" checked>
-                                <label for="computer_plays_black" class="radio_label" title="Computer plays black">
+                                <label id="label_computer_plays_black" for="computer_plays_black" class="radio_label" title="Computer plays black">
                                     Black
                                 </label>
                             </div>
                         </div>
 
-                        <div class="first_move">
-                            <div class="radio_head">
+                        <div id="algorithm_radio" class="first_move algorithm_radio">
+                            <div id="label_algorithm_radio" class="radio_head">
                                 Algorithm:
                             </div>
                             <div class="radio_item">
                                 <input type="radio" class="radio_point" id="algorithm_rnd" name = "algorithm" title="RND algorithm" value="0" checked>
-                                <label for="algorithm_rnd" class="radio_label" title="RND algorithm">
+                                <label id="label_algorithm_rnd" for="algorithm_rnd" class="radio_label" title="RND algorithm">
                                     Random
                                 </label>
                             </div>
                             <div class="radio_item">
-                                <input type="radio" class="radio_point" id="algorithm_deep_ml" name = "algorithm" title="Deep ML algorithm" value="1">
-                                <label for="algorithm_deep_ml" class="radio_label" title="Deep ML algorithm">
+                                <input type="radio" class="radio_point" id="algorithm_masked" name = "algorithm" title="Deep ML algorithm" value="1">
+                                <label id="label_algorithm_masked" for="algorithm_masked" class="radio_label" title="Masked algorithm">
+                                    Masked algorithm
+                                </label>
+                            </div>
+                            <div class="radio_item">
+                                <input type="radio" class="radio_point" id="algorithm_deep_ml" name = "algorithm" title="Deep ML algorithm" value="2">
+                                <label id="label_algorithm_deep_ml" for="algorithm_deep_ml" class="radio_label" title="Deep ML algorithm">
                                     Deep ML
                                 </label>
                             </div>
@@ -118,12 +125,15 @@
                 </div>
                 <div class="c">
                     <div class="c_border">
-                        <textarea class="log_area" readonly>123</textarea>
+                        <textarea id="log_area" class="log_area" readonly>123</textarea>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 </body>
+<script src="js/logger.js"></script>
+<script src="js/control_elements.js"></script>
+<script src="js/display.js"></script>
 <script src="js/main.js"></script>
 </html>

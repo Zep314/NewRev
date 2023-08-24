@@ -212,12 +212,14 @@ body {
     padding-left: 10px;
     display: flex;
     gap: 20px;
+    transition: 0.5s;
 }
 
 .checkbox_hints {
     width: 20px;
     height: 20px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .chb_label {
@@ -227,23 +229,30 @@ body {
     font-weight: 400;
     line-height: normal;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .first_move {
     margin-top: 30px;
-    color: #000;
+    border: 1px solid #000;
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
     border: 1px solid #000;
     height: 90px;
     padding-left: 10px;
+    transition: 0.5s;
+}
+
+.algorithm_radio {
+    height: 110px;
 }
 
 .radio_head {
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 10px;
+    transition: 0.5s;
 }
 
 .radio_item {
@@ -253,9 +262,11 @@ body {
     gap: 10px;
     margin-top: 5px;
     cursor: pointer;
+    transition: 0.5s;
 }
 .radio_point, .radio_label {
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .c_border {

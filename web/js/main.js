@@ -1,36 +1,10 @@
-const newGameButton = document.getElementById('newGameButton');
-const resultWindow = document.getElementById('resultWindow');
-const closeButtonResultWindow = document.getElementById('closeButtonResultWindow');
-const resetGameButton = document.getElementById('resetGameButton');
-const statusText = document.getElementById('status_text');
+var game_field = {0:0, 1:1, 2:2};
+var legal_move = [4, 5];
 
-
-newGameButton.addEventListener('click', function() {
-    gameOver();
-});
-
-closeButtonResultWindow.addEventListener('click', function() {
-    statusText.textContent = 'Game in progress...';
-    resultWindow.style.display = 'none';
-    enableElements();
-});
-
-function gameOver() {
-    statusText.textContent = 'Game over!';
-    resultWindow.style.display = 'grid';
-    disableElements();
+var game_position = {
+    'game_field' : game_field,
+    'legal_move' : legal_move,
+    'last_move' : 6
 }
 
-function disableElements() {
-    newGameButton.setAttribute("disabled","disabled");
-    newGameButton.className = 'button1disabled';
-    resetGameButton.setAttribute("disabled","disabled");
-    resetGameButton.className = 'button1disabled';
-}
-
-function enableElements() {
-    newGameButton.removeAttribute("disabled");
-    newGameButton.className = 'button1';
-    resetGameButton.removeAttribute("disabled");
-    resetGameButton.className = 'button1';
-}
+display(game_position);
