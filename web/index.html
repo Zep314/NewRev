@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
     <main>
         <div class="container center">
             <div class="main_grid">
-                <div class="a">
+                <div class="a" id="game cell">
                     <div class="main_header">
                         Reversi AI Game
                     </div>   
@@ -40,11 +40,8 @@
                         </div>
                         
                     </div>
-<!--                    <div class="game_field">-->
-<!--                        123-->
-<!--                    </div>-->
                     <canvas id="game_field" class="game_field"></canvas>
-                </div>
+                 </div>
                 <div class="b">
                     <div class="b_border">
                         <div class="game_status">
@@ -118,9 +115,18 @@
                                     Deep ML
                                 </label>
                             </div>
-
                         </div>
-
+<!--                        test!!!!-->
+                        <div class="first_move">
+                            <label for="dice_number">Dice number:</label>
+                            <input type="text" id="dice_number" value="12">
+                            <button id="test_show_white">Show white</button>
+                            <button id="test_show_black">Show black</button>
+                            <button id="test_hide">Hide</button>
+                            <button id="test_rotate">Rotate</button>
+                            <button id="test_hint">Hint</button>
+                        </div>
+<!--                        test!!!!-->
                     </div>
                 </div>
                 <div class="c">

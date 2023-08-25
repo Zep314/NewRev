@@ -129,3 +129,4 @@ function algorithmRadioEnable(enable) {
         document.getElementById("algorithm_deep_ml").disabled = true;
     }
 }
+

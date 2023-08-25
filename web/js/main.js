@@ -7,4 +7,6 @@ var game_position = {
     'last_move' : 6
 }
 
+initDice();
 display(game_position);
+

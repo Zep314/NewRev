@@ -317,3 +317,8 @@ body {
     line-height: normal;
     margin-bottom: 30px;
 }
+
+.dice {
+    width: 20px;
+    height: 20px;
+}
