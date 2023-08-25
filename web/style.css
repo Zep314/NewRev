@@ -114,13 +114,6 @@ body {
     text-decoration-line: underline;
 }
 
-.game_field {
-    margin-top: 30px;
-    width: 600px;
-    height: 600px;
-    background: #0DA838;
-}
-
 .b_border {
     height: 738px;
     border: 1px solid #000;
@@ -319,6 +312,44 @@ body {
 }
 
 .dice {
-    width: 20px;
-    height: 20px;
+    width: 68px;
+    height: 68px;
+    border: 4px solid;
+}
+
+@-webkit-keyframes showing {
+  0% {
+    -webkit-transform: scale(0.0, 0.0);
+    transform: scale(0.0, 0.0)
+  }
+  100% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@keyframes showing {
+  0% {
+    -webkit-transform: scale(0.0, 0.0);
+    transform: scale(0.0, 0.0)
+  }
+  100% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+}
+
+.game_field {
+    margin-top: 30px;
+    width: 600px;
+    height: 600px;
+    background: #0DA838;
+}
+
+.game_canvas {
+    transform: translate(0px, -600px);
+    width: 600px;
+    height: 600px;
+    position: absolute;
+
 }

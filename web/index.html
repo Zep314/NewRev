@@ -13,7 +13,7 @@
     <main>
         <div class="container center">
             <div class="main_grid">
-                <div class="a" id="game cell">
+                <div class="a">
                     <div class="main_header">
                         Reversi AI Game
                     </div>   
@@ -40,7 +40,8 @@
                         </div>
                         
                     </div>
-                    <canvas id="game_field" class="game_field"></canvas>
+                    <div class="game_field" id="game cell"></div>
+                    <canvas id="game_field" class="game_canvas"></canvas>
                  </div>
                 <div class="b">
                     <div class="b_border">
@@ -131,7 +132,7 @@
                 </div>
                 <div class="c">
                     <div class="c_border">
-                        <textarea id="log_area" class="log_area" readonly>123</textarea>
+                        <textarea id="log_area" class="log_area" readonly></textarea>
                     </div>
                 </div>
             </div>
@@ -139,7 +140,7 @@
     </main>
 </body>
 <script src="js/logger.js"></script>
-<script src="js/control_elements.js"></script>
 <script src="js/display.js"></script>
+<script src="js/control_elements.js"></script>
 <script src="js/main.js"></script>
 </html>

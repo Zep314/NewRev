@@ -130,3 +130,62 @@ function algorithmRadioEnable(enable) {
     }
 }
 
+document.getElementById('test_hide').addEventListener('click', function() {
+    hideDiceTest();
+});
+function hideDiceTest() {
+    hideDice(document.getElementById('dice_number').value);
+}
+
+document.getElementById('test_hint').addEventListener('click', function() {
+    hintDiceTest();
+});
+function hintDiceTest() {
+    hintDice(document.getElementById('dice_number').value);
+}
+
+document.getElementById('test_show_white').addEventListener('click', function() {
+    showDiceTest(true);
+});
+function showDiceTest(isWhite) {
+    showDice(document.getElementById('dice_number').value,isWhite);
+}
+document.getElementById('test_show_black').addEventListener('click', function() {
+    showDiceTest(false);
+});
+
+function hideDice(num) {
+    document.getElementById('dice'+num.toString().padStart(2, '0')).style.display = 'none';
+    document.getElementById('dice'+num.toString().padStart(2, '0')).style.cursor = '';
+}
+function showDice(num, isWhite) {
+    diceStyle = document.getElementById('dice'+num.toString().padStart(2, '0')).style;
+
+    diceStyle.display = 'block';
+    diceStyle.borderRadius = '50%';
+    diceStyle.webkitAnimationName = 'showing';
+    diceStyle.webkitAnimationDuration = '1s';
+    if (isWhite) {
+        diceStyle.backgroundColor = '#fff';
+        diceStyle.borderColor = '#000';
+    } else {
+        diceStyle.backgroundColor = '#000';
+        diceStyle.borderColor = '#fff';
+    }
+    diceStyle.transform = '';
+    diceStyle.cursor = 'pointer';
+    // make sure to reset the name after 1 seconds, otherwise another call to colorchange wont have any effect
+    setTimeout(function() {
+        diceStyle.webkitAnimationName = '';
+    }, 1000);
+}
+function hintDice(num) {
+    diceStyle = document.getElementById('dice'+num.toString().padStart(2, '0')).style;
+
+    diceStyle.display = 'block';
+    diceStyle.borderRadius = '50%';
+    diceStyle.backgroundColor = '#ff0';
+    diceStyle.borderColor = '#ff0';
+    diceStyle.transform = 'scale(0.1, 0.1)';
+    diceStyle.cursor = 'pointer';
+}
