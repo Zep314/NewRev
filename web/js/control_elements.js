@@ -154,13 +154,21 @@ document.getElementById('test_show_black').addEventListener('click', function() 
     showDiceTest(false);
 });
 
+document.getElementById('test_rotate').addEventListener('click', function() {
+    rotateDiceTest();
+});
+function rotateDiceTest() {
+    rotateDice(document.getElementById('dice_number').value);
+}
+
+
 function hideDice(num) {
     document.getElementById('dice'+num.toString().padStart(2, '0')).style.display = 'none';
     document.getElementById('dice'+num.toString().padStart(2, '0')).style.cursor = '';
 }
+
 function showDice(num, isWhite) {
     diceStyle = document.getElementById('dice'+num.toString().padStart(2, '0')).style;
-
     diceStyle.display = 'block';
     diceStyle.borderRadius = '50%';
     diceStyle.webkitAnimationName = 'showing';
@@ -173,19 +181,60 @@ function showDice(num, isWhite) {
         diceStyle.borderColor = '#fff';
     }
     diceStyle.transform = '';
-    diceStyle.cursor = 'pointer';
     // make sure to reset the name after 1 seconds, otherwise another call to colorchange wont have any effect
     setTimeout(function() {
         diceStyle.webkitAnimationName = '';
     }, 1000);
 }
+
 function hintDice(num) {
     diceStyle = document.getElementById('dice'+num.toString().padStart(2, '0')).style;
-
     diceStyle.display = 'block';
     diceStyle.borderRadius = '50%';
-    diceStyle.backgroundColor = '#ff0';
-    diceStyle.borderColor = '#ff0';
-    diceStyle.transform = 'scale(0.1, 0.1)';
+    diceStyle.backgroundColor = '#0DA838';
+    // diceStyle.opacity = 0.0;
+    diceStyle.border = '3px solid #0DA838';
+    //diceStyle.transform = 'scale(0.5, 0.5)';
     diceStyle.cursor = 'pointer';
+    document.getElementById('dice'+num.toString().padStart(2, '0')).onclick = function() { diceClick('dice'+num.toString().padStart(2, '0')) };
+
+    iDiv = document.createElement('div');
+    iDiv.className = 'hint_point';
+    iDiv.style.position = 'absolute';
+    document.getElementById('dice'+num.toString().padStart(2, '0')).appendChild(iDiv);
+
+}
+
+function rotateDice(num) {
+    myDivObj = document.getElementById('dice'+num.toString().padStart(2, '0'))
+    diceStyle = myDivObj.style;
+    diceStyle.display = 'block';
+    diceStyle.borderRadius = '50%';
+    diceStyle.webkitAnimationDuration = '1.0s';
+    diceStyle.webkitAnimation
+    
+    let myDivObjBgColor = window.getComputedStyle(myDivObj).backgroundColor;
+
+    if (myDivObjBgColor == 'rgb(255, 255, 255)') {
+        diceStyle.webkitAnimationName = 'rotate_white_to_black';
+    } else {
+        diceStyle.webkitAnimationName = 'rotate_black_to_white';
+    }
+
+    diceStyle.transform = '';
+    setTimeout(function() {
+        diceStyle.webkitAnimationName = '';
+        if (myDivObjBgColor == 'rgb(255, 255, 255)') {
+            diceStyle.backgroundColor = '#000';
+            diceStyle.borderColor = '#fff';
+        } else {
+            diceStyle.backgroundColor = '#fff';
+            diceStyle.borderColor = '#000';
+        }
+    }, 750);
+
+}
+
+function diceClick(diceNum) {
+    statusText.textContent = 'Dice ' + diceNum + ' is clicked!';
 }

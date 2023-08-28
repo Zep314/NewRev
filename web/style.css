@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-B* {
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -318,25 +318,86 @@ body {
 }
 
 @-webkit-keyframes showing {
-  0% {
-    -webkit-transform: scale(0.0, 0.0);
-    transform: scale(0.0, 0.0)
-  }
-  100% {
-    -webkit-transform: scale(1.0, 1.0);
-    transform: scale(1.0, 1.0);
-  }
+    0% {
+        -webkit-transform: scale(0.0, 0.0);
+        transform: scale(0.0, 0.0)
+    }
+    100% {
+        -webkit-transform: scale(1.0, 1.0);
+        transform: scale(1.0, 1.0);
+    }
 }
 
 @keyframes showing {
-  0% {
-    -webkit-transform: scale(0.0, 0.0);
-    transform: scale(0.0, 0.0)
-  }
-  100% {
-    -webkit-transform: scale(1.0, 1.0);
-    transform: scale(1.0, 1.0);
-  }
+    0% {
+        -webkit-transform: scale(0.0, 0.0);
+        transform: scale(0.0, 0.0);
+    }
+    100% {
+        -webkit-transform: scale(1.0, 1.0);
+        transform: scale(1.0, 1.0);
+    }
+}
+
+
+@keyframes rotate_white_to_black {
+    0% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        background-color: white;
+        border-color: black;
+    }
+    100% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        background-color: black;
+        border-color: white;
+    }
+}
+
+@keyframes rotate_black_to_white {
+    0% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        background-color: black;
+        border-color: white;
+    }
+    100% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        background-color: white;
+        border-color: black;
+    }
+}
+
+@-webkit-keyframes rotate_white_to_black {
+    0% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        background-color: white;
+        border-color: black;
+    }
+    100% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        background-color: black;
+        border-color: white;
+    }
+}
+
+@-webkit-keyframes rotate_black_to_white {
+    0% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        background-color: black;
+        border-color: white;
+    }
+    100% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        background-color: white;
+        border-color: black;
+    }
 }
 
 .game_field {
@@ -351,9 +412,16 @@ body {
     width: 600px;
     height: 600px;
     position: absolute;
-
+    z-index: -1000;
 }
 
-.dice:hover {
-    cursor: pointer;
+.hint_point {
+    margin-top: 23px;
+    margin-left: 23px;
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    z-index: 1000;
+    border: 1px solid #000;
+    border-radius: 50%;
 }

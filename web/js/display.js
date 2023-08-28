@@ -19,15 +19,11 @@ function display(position) {
     ctx.setLineDash([7,3]);
     ctx.strokeStyle = '#000';
     ctx.stroke();
-
 }
 
 function initDice() {
     canvas = document.getElementById("game cell");
     cellWidth = Math.round(canvas.getBoundingClientRect().width / 8);
-    to_log(cellWidth.toString());
-    to_log('Width: '+ canvas.getBoundingClientRect().width.toString());
-    to_log('Height: '+ canvas.getBoundingClientRect().height.toString());
     for (let i=0; i<64; i++) {
         iDiv = document.createElement('div');
         iDiv.id = 'dice' + i.toString().padStart(2, '0');
@@ -37,7 +33,6 @@ function initDice() {
         iDiv.style.marginLeft = ((i % 8) * cellWidth).toString() + "px";
         iDiv.style.marginTop = (Math.floor(i / 8) * cellWidth ).toString() + "px"
         iDiv.style.position = 'absolute';
-
         document.getElementById("game cell").appendChild(iDiv);
     }
 }
